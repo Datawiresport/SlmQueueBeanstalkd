@@ -24,16 +24,11 @@ class BeanstalkdWorker extends AbstractWorker
             return ProcessJobEvent::JOB_STATUS_UNKNOWN;
         }
 
-        /**
-         * In Beanstalkd, if an error occurs (exception for instance), the job
-         * is automatically reinserted into the queue after a configured delay
-         * (the "visibility_timeout" option). If the job executed correctly, it
-         * must explicitly be removed
-         */
         try {
             $job->execute();
             $queue->delete($job);
 
+            return ProcessJobEvent::JOB_STATUS_SUCCESS;
         } catch (JobException\ReleasableException $exception) {
             $queue->release($job, $exception->getOptions());
 
