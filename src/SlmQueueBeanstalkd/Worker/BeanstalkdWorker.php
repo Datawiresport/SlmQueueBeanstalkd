@@ -6,9 +6,9 @@ use Exception;
 use SlmQueue\Job\JobInterface;
 use SlmQueue\Queue\QueueInterface;
 use SlmQueue\Worker\AbstractWorker;
-use SlmQueue\Worker\Event\ProcessJobEvent;
 use SlmQueueBeanstalkd\Job\Exception as JobException;
 use SlmQueueBeanstalkd\Queue\BeanstalkdQueueInterface;
+use SlmQueueBeanstalkd\Worker\Event\ProcessJobEvent;
 
 /**
  * Worker for Beanstalkd
@@ -43,7 +43,7 @@ class BeanstalkdWorker extends AbstractWorker
                 'trace'   => $exception->getTraceAsString()
             ]);
 
-            return ProcessJobEvent::JOB_STATUS_FAILURE;
+            return ProcessJobEvent::JOB_STATUS_FAILURE_UNRECOVERABLE;
         }
     }
 }
