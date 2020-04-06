@@ -37,6 +37,11 @@
         "squizlabs/php_codesniffer": "1.5.*",
         "phpunit/phpunit": "~4.1"
     },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0"
+        }
+    },
     "autoload": {
         "psr-0": {
             "SlmQueueBeanstalkd": "src/"
