@@ -25,11 +25,11 @@
         }
     ],
     "require": {
-        "php": ">=5.3.3",
+        "php": ">=7.3",
         "zendframework/zend-mvc": "~2.2",
         "zendframework/zend-servicemanager": "~2.2",
         "zendframework/zend-stdlib": "~2.2",
-        "slm/queue": "^1.0",
+        "slm/queue": "^1.0|^2.0",
         "pda/pheanstalk": "~3.0"
     },
     "require-dev": {
