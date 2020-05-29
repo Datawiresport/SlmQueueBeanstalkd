@@ -27,13 +27,12 @@
     "require": {
         "php": ">=7.3",
         "laminas/laminas-mvc": "^3.1",
-        "zendframework/zend-servicemanager": "~2.2",
+        "laminas/laminas-servicemanager": "^3.4",
         "laminas/laminas-stdlib": "^3.2",
         "slm/queue": "^1.0|^2.0",
         "pda/pheanstalk": "~3.0"
     },
     "require-dev": {
-        "zendframework/zendframework": "~2.2",
         "squizlabs/php_codesniffer": "1.5.*",
         "phpunit/phpunit": "~4.1"
     },
