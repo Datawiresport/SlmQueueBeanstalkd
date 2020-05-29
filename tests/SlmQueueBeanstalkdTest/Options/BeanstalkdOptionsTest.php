@@ -4,7 +4,7 @@ namespace SlmQueueBeanstalkdTest\Options;
 
 use PHPUnit_Framework_TestCase as TestCase;
 use SlmQueueBeanstalkdTest\Util\ServiceManagerFactory;
-use Zend\ServiceManager\ServiceManager;
+use Laminas\ServiceManager\ServiceManager;
 
 class BeanstalkdOptionsTest extends TestCase
 {

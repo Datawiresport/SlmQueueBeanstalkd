@@ -2,9 +2,9 @@
 
 namespace SlmQueueBeanstalkd;
 
-use Zend\Loader;
-use Zend\Console\Adapter\AdapterInterface;
-use Zend\ModuleManager\Feature;
+use Laminas\Loader;
+use Laminas\Console\Adapter\AdapterInterface;
+use Laminas\ModuleManager\Feature;
 
 /**
  * SlmQueueBeanstalkd

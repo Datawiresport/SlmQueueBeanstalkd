@@ -15,7 +15,7 @@ class BeanstalkdWorkerTest extends TestCase
 
     public function setUp()
     {
-        $this->worker = new BeanstalkdWorker($this->getMock('Zend\EventManager\EventManagerInterface'));
+        $this->worker = new BeanstalkdWorker($this->getMock('Laminas\EventManager\EventManagerInterface'));
     }
 
     public function testReturnsUnknownIfNotABeanstalkdQueue()
