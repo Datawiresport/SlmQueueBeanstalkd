@@ -34,5 +34,5 @@ interface BeanstalkdQueueInterface extends QueueInterface
      * @param  int $max The maximum jobs to kick
      * @return int Number of jobs kicked
      */
-    public function kick($max): int
+    public function kick($max): int;
 }
