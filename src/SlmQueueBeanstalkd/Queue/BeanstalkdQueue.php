@@ -74,7 +74,7 @@ class BeanstalkdQueue extends AbstractQueue implements BeanstalkdQueueInterface
      *
      * {@inheritDoc}
      */
-    public function pop(array $options = []): ?JobInterface;
+    public function pop(array $options = []): ?JobInterface
     {
         $job = $this->pheanstalk->reserveFromTube(
             $this->getTubeName(),
