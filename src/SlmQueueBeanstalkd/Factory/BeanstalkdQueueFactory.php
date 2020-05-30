@@ -5,6 +5,7 @@ namespace SlmQueueBeanstalkd\Factory;
 use SlmQueueBeanstalkd\Options\QueueOptions;
 use SlmQueueBeanstalkd\Queue\BeanstalkdQueue;
 use Laminas\ServiceManager\FactoryInterface;
+use Laminas\ServiceManager\ServiceManager;
 use Laminas\ServiceManager\ServiceLocatorInterface;
 
 /**
@@ -12,6 +13,15 @@ use Laminas\ServiceManager\ServiceLocatorInterface;
  */
 class BeanstalkdQueueFactory implements FactoryInterface
 {
+    /**
+     * @param ServiceManager $serviceManager
+     *
+     * @return BeanstalkdQueueFactory
+     */
+    public function __invoke(ServiceManager $serviceManager)
+    {
+    }
+
     /**
      * {@inheritDoc}
      */
