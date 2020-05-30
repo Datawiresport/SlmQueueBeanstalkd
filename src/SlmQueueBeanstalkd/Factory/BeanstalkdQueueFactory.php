@@ -5,7 +5,7 @@ namespace SlmQueueBeanstalkd\Factory;
 use Interop\Container\ContainerInterface;
 use SlmQueueBeanstalkd\Options\QueueOptions;
 use SlmQueueBeanstalkd\Queue\BeanstalkdQueue;
-use Laminas\ServiceManager\FactoryInterface;
+use Laminas\ServiceManager\Factory\FactoryInterface;
 use Laminas\ServiceManager\ServiceManager;
 
 /**
