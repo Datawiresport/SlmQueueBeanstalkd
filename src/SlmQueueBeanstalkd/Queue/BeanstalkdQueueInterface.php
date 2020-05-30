@@ -26,7 +26,7 @@ interface BeanstalkdQueueInterface extends QueueInterface
      * @param  array        $options
      * @return void
      */
-    public function bury(JobInterface $job, array $options = array());
+    public function bury(JobInterface $job, array $options = array()): void;
 
     /**
      * Kick a specified number of buried jobs, hence making them "ready" again
@@ -34,5 +34,5 @@ interface BeanstalkdQueueInterface extends QueueInterface
      * @param  int $max The maximum jobs to kick
      * @return int Number of jobs kicked
      */
-    public function kick($max);
+    public function kick($max): int
 }
