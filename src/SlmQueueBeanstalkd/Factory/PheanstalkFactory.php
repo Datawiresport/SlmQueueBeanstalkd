@@ -2,9 +2,9 @@
 
 namespace SlmQueueBeanstalkd\Factory;
 
+use Interop\Container\ContainerInterface;
 use Pheanstalk\Pheanstalk;
-use Laminas\ServiceManager\FactoryInterface;
-use Laminas\ServiceManager\ServiceLocatorInterface;
+use Laminas\ServiceManager\Factory\FactoryInterface;
 
 /**
  * PheanstalkFactory
@@ -14,10 +14,10 @@ class PheanstalkFactory implements FactoryInterface
     /**
      * {@inheritDoc}
      */
-    public function createService(ServiceLocatorInterface $serviceLocator)
+    public function __invoke(ContainerInterface $container, $requestedName, ?array $options = null)
     {
         /** @var $beanstalkdOptions \SlmQueueBeanstalkd\Options\BeanstalkdOptions */
-        $beanstalkdOptions = $serviceLocator->get('SlmQueueBeanstalkd\Options\BeanstalkdOptions');
+        $beanstalkdOptions = $container->get('SlmQueueBeanstalkd\Options\BeanstalkdOptions');
         $connectionOptions = $beanstalkdOptions->getConnection();
 
         return new Pheanstalk(
