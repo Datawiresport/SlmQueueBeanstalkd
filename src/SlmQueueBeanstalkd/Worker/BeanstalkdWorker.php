@@ -18,7 +18,7 @@ class BeanstalkdWorker extends AbstractWorker
     /**
      * {@inheritDoc}
      */
-    public function processJob(JobInterface $job, QueueInterface $queue)
+    public function processJob(JobInterface $job, QueueInterface $queue): int
     {
         if (!$queue instanceof BeanstalkdQueueInterface) {
             return ProcessJobEvent::JOB_STATUS_UNKNOWN;
